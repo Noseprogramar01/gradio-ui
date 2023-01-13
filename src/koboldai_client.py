@@ -43,6 +43,7 @@ def run_raw_inference_on_kai(
     repetition_penalty: float,
     **kwargs,
 ) -> str:
+    print(koboldai_url)
     endpoint = f"{koboldai_url}/api/v1/generate"
     payload = {
         "prompt": prompt,
