@@ -64,6 +64,12 @@ def main(server_port: int,
         elif koboldai_url:
             model_output = f"{char_name}:"
             print(koboldai_url, prompt,**generation_settings)
+            print("prompt:",prompt)
+            try:
+                  for generation_setting in generation_settings:
+                           print(generation_setting)
+            except:
+                  pass
             model_output += run_raw_inference_on_kai(koboldai_url, prompt,
                                                      **generation_settings)
             
