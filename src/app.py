@@ -63,7 +63,6 @@ def main(server_port: int,
                                              user_input, **generation_settings)
         elif koboldai_url:
             model_output = f"{char_name}:"
-            print(koboldai_url, prompt,**generation_settings)
             print("prompt:",prompt)
             try:
                   for generation_setting in generation_settings:
