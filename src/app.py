@@ -63,8 +63,10 @@ def main(server_port: int,
                                              user_input, **generation_settings)
         elif koboldai_url:
             model_output = f"{char_name}:"
+            print(koboldai_url, prompt,**generation_settings)
             model_output += run_raw_inference_on_kai(koboldai_url, prompt,
                                                      **generation_settings)
+            
         else:
             raise Exception(
                 "Not using local inference, but no Kobold instance URL was"
